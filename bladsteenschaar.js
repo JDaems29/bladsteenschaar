@@ -22,23 +22,9 @@ for (const keuze of keuzes) {
 }
 //De keuze van de computer
 function genereerComputerKeuze() {
-  const nummer = Math.floor(Math.random() * 3 + 1);
-  let keuze = "";
-  switch (nummer) {
-    case 1:
-      keuze = "blad";
-      break;
-    case 2:
-      keuze = "steen";
-      break;
-    case 3:
-      keuze = "schaar";
-      break;
-    default:
-      console.log("error");
-      break;
-  }
-  return keuze;
+  const nummer = Math.floor(Math.random() * 3);
+  const keuzes = ["blad", "steen", "schaar"];
+  return keuzes[nummer];
 }
 //Zoek de winnaar
 function zoekWinnaar(gebruikerKeuze, computerKeuze) {
